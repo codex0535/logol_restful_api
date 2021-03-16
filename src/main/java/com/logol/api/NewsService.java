@@ -19,11 +19,11 @@ public class NewsService {
 		repo.save(news);
 	}
 	
-	public News get(String id) {
+	public News get(Integer id) {
 		return repo.findById(id).get();
 	}
 	
-	public void delete(String id) {
+	public void delete(Integer id) {
 		repo.deleteById(id);
 	}
 }

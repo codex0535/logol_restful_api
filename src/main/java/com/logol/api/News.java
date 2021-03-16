@@ -9,7 +9,7 @@ import javax.persistence.Id;
 
 @Entity 
 public class News {
-	private String id;
+	private Integer id;
 	private String title;
 	private String description;
 	private LocalDate created_date;
@@ -17,7 +17,7 @@ public class News {
 	public News() {
 	}
 
-	public News(String id, String title, String description, LocalDate created_date) {
+	public News(Integer id, String title, String description, LocalDate created_date) {
 		super();
 		this.id = id;
 		this.title = title;
@@ -25,13 +25,13 @@ public class News {
 		this.created_date = created_date;
 	}
 	
-	@Id
+	@Id 
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	public String getId() {
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
